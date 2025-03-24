@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+pertama npm install terlebih dahulu
+
+abistu baru di npm start
+
 ### `npm start`
 
 Runs the app in the development mode.\
