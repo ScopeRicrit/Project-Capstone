@@ -1,0 +1,470 @@
+.dashboard-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Bagian kiri header (ikon Kembali ke Home dan logo) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-header .logo {
+  font-size: 24px;
+  margin-left: 10px;
+  font-weight: 700;
+  color: #1a3c34;
+}
+
+/* Styling untuk tombol Kembali ke Home (hanya ikon) */
+.back-to-home {
+  margin-left: 20px;
+  color: #666;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.back-to-home:hover {
+  color: #1a3c34;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 30px;
+  margin-right: 10px;
+}
+
+.dashboard-nav a {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.dashboard-nav a.active,
+.dashboard-nav a:hover {
+  color: #1a3c34;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.user-profile span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a3c34;
+}
+
+.user-profile .profile-icon {
+  font-size: 24px;
+  color: #1a3c34;
+}
+
+/* Main Content */
+.dashboard-content {
+  padding: 40px;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Total Pengeluaran (sebelumnya Main Balance) */
+.main-balance {
+  grid-column: span 2;
+}
+
+.main-balance h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.main-balance h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 10px;
+}
+
+.main-balance .account-number {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.balance-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start; /* Pastikan tombol tersisa tetap rata kiri */
+}
+
+.action-button {
+  padding: 10px 20px;
+  background-color: #1a3c34;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #2e5e56;
+}
+
+.action-button.secondary {
+  background-color: #f0f4f3;
+  color: #1a3c34;
+}
+
+.action-button.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Define Standing Orders */
+.standing-orders {
+  grid-column: span 1;
+}
+
+.standing-orders h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 10px;
+}
+
+.standing-orders p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Linked Accounts */
+.linked-accounts {
+  grid-column: span 3;
+}
+
+.linked-accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.account-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f4f3;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.account-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 5px;
+}
+
+.account-balance {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Latest Transactions */
+.transactions {
+  grid-column: span 2;
+}
+
+.transactions h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 20px;
+}
+
+.transactions table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.transactions td {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.transactions .category {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transactions .category.food {
+  background-color: #ff6b6b20;
+  color: #ff6b6b;
+}
+
+.transactions .category.clothes {
+  background-color: #ff9f4020;
+  color: #ff9f40;
+}
+
+.transactions .category.entertainment {
+  background-color: #4ecdc420;
+  color: #4ecdc4;
+}
+
+.transactions .category.salary {
+  background-color: #96ceb420;
+  color: #96ceb4;
+}
+
+.transactions .category.bills {
+  background-color: #d4a5a520;
+  color: #d4a5a5;
+}
+
+.transactions .category.pharmacy {
+  background-color: #45b7d120;
+  color: #45b7d1;
+}
+
+.transactions .positive {
+  color: #28a745;
+}
+
+.transactions .negative {
+  color: #ff6b6b;
+}
+
+.transactions .see-more {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #1a3c34;
+  border: 1px solid #1a3c34;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.transactions .see-more:hover {
+  background-color: #1a3c34;
+  color: #ffffff;
+}
+
+/* All Expenses */
+.expenses {
+  grid-column: span 1;
+}
+
+.expenses h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 20px;
+}
+
+.expense-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.expense-tabs button {
+  padding: 8px 15px;
+  background-color: #f0f4f3;
+  color: #666;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.expense-tabs button.active,
+.expense-tabs button:hover {
+  background-color: #1a3c34;
+  color: #ffffff;
+}
+
+.expense-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3c34;
+}
+
+.expense-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-item span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsivitas */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-balance,
+  .linked-accounts,
+  .transactions,
+  .expenses {
+    grid-column: span 2;
+  }
+
+  .standing-orders {
+    grid-column: span 2;
+  }
+
+  .linked-accounts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-balance,
+  .standing-orders,
+  .linked-accounts,
+  .transactions,
+  .expenses {
+    grid-column: span 1;
+  }
+
+  .linked-accounts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-header {
+    padding: 15px 20px;
+  }
+
+  .dashboard-nav {
+    gap: 15px;
+  }
+
+  .dashboard-nav a {
+    font-size: 14px;
+  }
+
+  .user-profile span {
+    font-size: 14px;
+  }
+
+  .user-profile .profile-icon {
+    font-size: 20px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .dashboard-header .logo {
+    font-size: 20px;
+  }
+
+  .back-to-home {
+    font-size: 16px;
+  }
+}

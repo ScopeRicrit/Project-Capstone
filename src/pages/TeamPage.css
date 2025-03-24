@@ -1,0 +1,20 @@
+.team-page {
+    padding: 80px 100px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .team-page h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a3c34;
+    margin-bottom: 20px;
+  }
+  
+  .team-page p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }

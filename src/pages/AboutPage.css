@@ -1,0 +1,331 @@
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f3; /* Background abu-abu muda */
+}
+
+/* Header Section dengan Garis-Garis */
+.about-header {
+  position: relative;
+  padding: 50px 0px 100px 0px;
+  background: #283739;
+  color: #EFFFFB;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  overflow: hidden;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header-lines {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.header-lines svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 100px;
+  background-color: #ffffff;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 60px 100px;
+  background-color: #f0f4f3;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 20px;
+}
+
+.mission-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+  padding: 60px 100px;
+  background-color: #ffffff;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.why-choose-us-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-card {
+  background-color: #EFFFFB;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.why-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Article Grid untuk Financial Apps dan Literacy Importance */
+.financial-apps-section,
+.literacy-importance-section {
+  padding: 80px 100px;
+  background-color: #f0f4f3;
+  animation: fadeIn 1s ease forwards;
+}
+
+.financial-apps-section {
+  animation-delay: 0.8s;
+}
+
+.literacy-importance-section {
+  animation-delay: 1s;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Layout Bergantian (Gambar Kanan, Teks Kiri) */
+.article-grid.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.article-grid.reverse .article-image-container {
+  grid-column: 2;
+}
+
+.article-grid.reverse .article-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.article-image-container {
+  position: relative;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.article-image:hover {
+  transform: scale(1.05);
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 15px;
+}
+
+.article-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.article-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.point-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.point-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.point-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 10px;
+}
+
+.point-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .about-header {
+    padding: 40px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .header-lines svg {
+    height: 80px;
+  }
+
+  .about-section,
+  .mission-section,
+  .why-choose-us-section,
+  .financial-apps-section,
+  .literacy-importance-section {
+    padding: 40px 20px;
+  }
+
+  .about-content h2,
+  .mission-content h2,
+  .why-choose-us-section h2,
+  .article-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content p,
+  .mission-content p,
+  .article-content p,
+  .point-card p {
+    font-size: 14px;
+  }
+
+  .why-choose-us-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .article-grid,
+  .article-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .article-grid.reverse .article-image-container,
+  .article-grid.reverse .article-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .article-image {
+    max-width: 100%;
+  }
+
+  .article-points {
+    grid-template-columns: 1fr;
+  }
+}

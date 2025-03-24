@@ -1,0 +1,177 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a3c34 0%, #2e5e56 100%);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 50px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-container h2 {
+  color: #1a3c34;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px 0px 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: #1a3c34;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+}
+
+.password-toggle:hover {
+  color: #28a745;
+}
+
+.login-button {
+  padding: 14px;
+  margin: 10px 0px 0px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+}
+
+.signup-link {
+  color: #666;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Styling untuk tombol Kembali */
+.back-button {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #f0f0f0; /* Warna abu-abu muda */
+  color: #1a3c34;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0; /* Warna abu-abu lebih gelap saat hover */
+  transform: scale(1.02);
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .login-container h2 {
+    font-size: 24px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .back-button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

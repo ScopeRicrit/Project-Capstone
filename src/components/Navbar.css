@@ -1,0 +1,145 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 100px; /* Padding awal */
+  background-color: #283739; /* Warna awal */
+  color: white;
+  position: sticky; /* Membuat navbar sticky */
+  top: 0; /* Menempel di atas */
+  z-index: 1000; /* Pastikan navbar di atas elemen lain */
+  transition: padding 0.3s ease, background-color 0.3s ease; /* Transisi halus */
+}
+
+.navbar.scrolled {
+  padding: 20px 100px; /* Padding lebih kecil saat scroll */
+  background-color: #1A2526; /* Warna lebih gelap saat scroll */
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 680;
+  font-style: italic;
+  color: #ffd700; /* Warna kuning untuk logo */
+  transition: font-size 0.3s ease; /* Transisi untuk font-size */
+}
+
+.navbar.scrolled .logo {
+  font-size: 22px; /* Logo sedikit mengecil saat scroll */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  position: relative; /* Untuk garis bawah */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s, font-size 0.3s ease; /* Transisi untuk font-size */
+}
+
+.navbar.scrolled .nav-links a {
+  font-size: 16px; /* Link sedikit mengecil saat scroll */
+}
+
+.nav-links a:hover {
+  color: #4F98CA;
+}
+
+/* Efek garis bawah saat hover */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #4F98CA;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon a {
+  color: white;
+  text-decoration: none;
+}
+
+.user-icon svg {
+  width: 26px;
+  height: 26px;
+  transition: width 0.3s ease, height 0.3s ease; /* Transisi untuk ukuran ikon */
+}
+
+.navbar.scrolled .user-icon svg {
+  width: 22px; /* Ikon sedikit mengecil saat scroll */
+  height: 22px;
+  margin-top: 8px;
+}
+
+.user-icon a:hover svg {
+  stroke: #ffd700;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px; /* Padding lebih kecil di layar kecil */
+  }
+
+  .navbar.scrolled {
+    padding: 15px 30px; /* Padding lebih kecil lagi saat scroll */
+  }
+
+  .logo {
+    font-size  : 22px;
+  }
+
+  .navbar.scrolled .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .navbar.scrolled .nav-links a {
+    font-size: 14px;
+  }
+
+  .user-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar.scrolled .user-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

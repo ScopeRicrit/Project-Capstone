@@ -1,0 +1,38 @@
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .not-found-page h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a3c34;
+    margin-bottom: 20px;
+  }
+  
+  .not-found-page p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .back-home {
+    padding: 12px 30px;
+    background-color: #ffd700;
+    color: #1a3c34;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .back-home:hover {
+    background-color: #e6c200;
+  }
