@@ -7,7 +7,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
-import DashboardPage from './pages/DashboardPage'; // Impor DashboardPage
+import DashboardPage from './pages/DashboardPage';
+import ContactPage from './pages/ContactPage'; // Impor ContactPage
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/contact" element={<ContactPage />} /> {/* Tambahkan rute untuk ContactPage */}
           <Route path="/profile" element={<NotFoundPage />} />
           <Route
             path="/dashboard"
