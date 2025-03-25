@@ -54,7 +54,7 @@
   font-family: 'Poppins', sans-serif;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
-
+ 
 .input-group input:focus {
   border-color: #28a745;
   box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
@@ -63,7 +63,7 @@
 
 .password-wrapper {
   position: relative;
-}
+} 
 
 .password-toggle {
   position: absolute;
@@ -80,7 +80,8 @@
 }
 
 .login-button {
-  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 14px;
   margin: 10px 0px 0px 20px;
   background-color: #28a745;
   color: white;

@@ -1,8 +1,11 @@
-import React from 'react';
-import CountUp from 'react-countup';
-import coinImage from '../assets/coin.png';
-import articleImage from '../assets/article.jpg';
-import './LandingPage.css';
+import React from "react";
+import CountUp from "react-countup";
+import coinImage from "../assets/coin.png";
+import articleImage from "../assets/article.jpg";
+import keunggulan1 from "../assets/keunggulan1.jpg";
+import keunggulan2 from "../assets/keunggulan2.jpg";
+import keunggulan3 from "../assets/keunggulan3.jpg";
+import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
@@ -17,7 +20,7 @@ const LandingPage = () => {
           </p>
           <button
             className="cta-button"
-            onClick={() => (window.location.href = '/login')}
+            onClick={() => (window.location.href = "/login")}
           >
             Mulai sekarang
           </button>
@@ -70,37 +73,21 @@ const LandingPage = () => {
         </h2>
         <div className="advantages">
           <div className="advantage-card">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Ikon Keunggulan 1"
-            />
-            <h3>Meningkatkan literasi keuangan</h3>
+            <img src={keunggulan1} alt="Ikon Literasi" />
+            <h3>Meningkatkan Literasi Keuangan</h3>
+            <p>Informasi literasi keuangan yang relevan dan mudah dipahami.</p>
+          </div>
+          <div className="advantage-card">
+            <img src={keunggulan2} alt="Ikon Fitur" />
+            <h3>Beragam Fitur Cerdas</h3>
             <p>
-              Memberikan informasi terkait literasi keuangan yang sesuai dengan
-              kebutuhan Anda
+              Artikel interaktif, kalkulator, dan alat bantu keuangan lainnya.
             </p>
           </div>
           <div className="advantage-card">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Ikon Keunggulan 2"
-            />
-            <h3>Menawarkan berbagai macam fitur</h3>
-            <p>
-              Menyediakan fitur seperti artikel keuangan interaktif, kalkulator
-              keuangan, dan lainnya
-            </p>
-          </div>
-          <div className="advantage-card">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Ikon Keunggulan 3"
-            />
-            <h3>Mudah digunakan</h3>
-            <p>
-              Antarmuka yang ramah pengguna, cocok untuk remaja dan pemula dalam
-              literasi keuangan
-            </p>
+            <img src={keunggulan3} alt="Ikon Mudah" />
+            <h3>Mudah Digunakan</h3>
+            <p>Antarmuka intuitif untuk remaja dan pemula.</p>
           </div>
         </div>
       </section>

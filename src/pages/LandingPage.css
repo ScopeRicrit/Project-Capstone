@@ -142,6 +142,8 @@
   letter-spacing: 1px;
 }
 
+
+
 /* Animasi saat kartu muncul */
 .stat-card {
   animation: slideUp 0.5s ease forwards;
@@ -203,9 +205,13 @@
 }
 
 .advantage-card img {
-  width: 50px;
-  margin-bottom: 20px;
+  width: 90%;
+  max-width: 500px;
+ 
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
+
 
 .advantage-card h3 {
   font-size: 20px;
