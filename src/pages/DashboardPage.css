@@ -4,7 +4,6 @@
   min-height: 100vh;
 }
 
-/* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +16,6 @@
   z-index: 1000;
 }
 
-/* Bagian kiri header (ikon Kembali ke Home dan logo) */
 .header-left {
   display: flex;
   align-items: center;
@@ -31,7 +29,6 @@
   color: #1a3c34;
 }
 
-/* Styling untuk tombol Kembali ke Home (hanya ikon) */
 .back-to-home {
   margin-left: 20px;
   color: #666;
@@ -80,19 +77,16 @@
   color: #1a3c34;
 }
 
-/* Main Content */
 .dashboard-content {
   padding: 40px;
 }
 
-/* Grid Layout */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* Card Styling */
 .card {
   background-color: #ffffff;
   border-radius: 15px;
@@ -100,7 +94,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Total Pengeluaran (sebelumnya Main Balance) */
 .main-balance {
   grid-column: span 2;
 }
@@ -128,7 +121,7 @@
 .balance-actions {
   display: flex;
   gap: 15px;
-  justify-content: flex-start; /* Pastikan tombol tersisa tetap rata kiri */
+  justify-content: flex-start;
 }
 
 .action-button {
@@ -158,7 +151,6 @@
   background-color: #e0e0e0;
 }
 
-/* Define Standing Orders */
 .standing-orders {
   grid-column: span 1;
 }
@@ -177,7 +169,6 @@
   margin-bottom: 20px;
 }
 
-/* Linked Accounts */
 .linked-accounts {
   grid-column: span 3;
 }
@@ -211,7 +202,6 @@
   color: #666;
 }
 
-/* Latest Transactions */
 .transactions {
   grid-column: span 2;
 }
@@ -304,7 +294,6 @@
   color: #ffffff;
 }
 
-/* All Expenses */
 .expenses {
   grid-column: span 1;
 }
@@ -393,7 +382,6 @@
   color: #666;
 }
 
-/* Responsivitas */
 @media (max-width: 1024px) {
   .dashboard-grid {
     grid-template-columns: repeat(2, 1fr);

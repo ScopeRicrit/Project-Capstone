@@ -1,9 +1,8 @@
 .about-page {
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f4f3; /* Background abu-abu muda */
+  background-color: #f0f4f3;
 }
 
-/* Header Section dengan Garis-Garis */
 .about-header {
   position: relative;
   padding: 50px 0px 100px 0px;
@@ -38,7 +37,6 @@
   height: 100%;
 }
 
-/* About Section */
 .about-section {
   padding: 60px 100px;
   background-color: #ffffff;
@@ -65,7 +63,6 @@
   line-height: 1.6;
 }
 
-/* Mission Section */
 .mission-section {
   padding: 60px 100px;
   background-color: #f0f4f3;
@@ -92,7 +89,6 @@
   line-height: 1.6;
 }
 
-/* Why Choose Us Section */
 .why-choose-us-section {
   padding: 60px 100px;
   background-color: #ffffff;
@@ -141,7 +137,6 @@
   line-height: 1.6;
 }
 
-/* Article Grid untuk Financial Apps dan Literacy Importance */
 .financial-apps-section,
 .literacy-importance-section {
   padding: 80px 100px;
@@ -166,7 +161,6 @@
   align-items: center;
 }
 
-/* Layout Bergantian (Gambar Kanan, Teks Kiri) */
 .article-grid.reverse {
   grid-template-columns: 1fr 1fr;
 }
@@ -224,6 +218,12 @@
 .point-card {
   background-color: #ffffff;
   padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.point-card:hover {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

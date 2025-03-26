@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  // Untuk saat ini, kita asumsikan user belum login
-  const isLoggedIn = false; // Ganti dengan logika autentikasi nanti
+  const isLoggedIn = false;
 
-  // State untuk mendeteksi scroll
   const [scrolled, setScrolled] = useState(false);
 
-  // Efek untuk mendeteksi scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

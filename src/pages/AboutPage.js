@@ -1,14 +1,12 @@
 import React from 'react';
 import './AboutPage.css';
 
-// Impor foto (sesuaikan path sesuai lokasi file)
 import financialAppImage from '../assets/financial-app-illustration.jpg';
 import teenSavingImage from '../assets/teen-saving-money.jpg';
 
 const AboutPage = () => {
   return (
     <div className="about-page">
-      {/* Header Section dengan Garis-Garis */}
       <section className="about-header">
         <div className="header-content">
           <h1>Tentang CuanCerdas</h1>
@@ -27,7 +25,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="about-section">
         <div className="about-content">
           <h2>Apa itu CuanCerdas?</h2>
@@ -42,7 +39,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="mission-section">
         <div className="mission-content">
           <h2>Tujuan Kami</h2>
@@ -57,7 +53,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="why-choose-us-section">
         <h2>Mengapa Memilih CuanCerdas?</h2>
         <div className="why-choose-us-cards">
@@ -86,7 +81,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Financial Apps Section dengan Grid */}
       <section className="financial-apps-section">
         <div className="article-grid">
           <div className="article-image-container">
@@ -119,7 +113,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Literacy Importance Section dengan Grid */}
       <section className="literacy-importance-section">
         <div className="article-grid reverse">
           <div className="article-content">

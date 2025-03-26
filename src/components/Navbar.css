@@ -2,30 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 100px; /* Padding awal */
-  background-color: #283739; /* Warna awal */
+  padding: 32px 100px;
+  background-color: #283739;
   color: white;
-  position: sticky; /* Membuat navbar sticky */
-  top: 0; /* Menempel di atas */
-  z-index: 1000; /* Pastikan navbar di atas elemen lain */
-  transition: padding 0.3s ease, background-color 0.3s ease; /* Transisi halus */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  padding: 20px 100px; /* Padding lebih kecil saat scroll */
-  background-color: #1A2526; /* Warna lebih gelap saat scroll */
+  padding: 20px 100px;
+  background-color: #1a2526;
 }
 
 .logo {
   font-size: 25px;
   font-weight: 680;
   font-style: italic;
-  color: #ffd700; /* Warna kuning untuk logo */
-  transition: font-size 0.3s ease; /* Transisi untuk font-size */
+  color: #ffd700;
+  transition: font-size 0.3s ease;
 }
 
 .navbar.scrolled .logo {
-  font-size: 22px; /* Logo sedikit mengecil saat scroll */
+  font-size: 22px;
 }
 
 .nav-links {
@@ -37,7 +37,7 @@
 
 .nav-links li {
   margin: 0 20px;
-  position: relative; /* Untuk garis bawah */
+  position: relative;
 }
 
 .nav-links a {
@@ -45,24 +45,22 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  transition: color 0.3s, font-size 0.3s ease; /* Transisi untuk font-size */
+  transition: color 0.3s, font-size 0.3s ease;
 }
 
 .navbar.scrolled .nav-links a {
-  font-size: 16px; /* Link sedikit mengecil saat scroll */
+  font-size: 16px;
 }
-
 .nav-links a:hover {
-  color: #4F98CA;
+  color: #4f98ca;
 }
 
-/* Efek garis bawah saat hover */
 .nav-links li::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #4F98CA;
+  background-color: #4f98ca;
   bottom: -5px;
   left: 0;
   transition: width 0.3s;
@@ -85,11 +83,11 @@
 .user-icon svg {
   width: 26px;
   height: 26px;
-  transition: width 0.3s ease, height 0.3s ease; /* Transisi untuk ukuran ikon */
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
 .navbar.scrolled .user-icon svg {
-  width: 22px; /* Ikon sedikit mengecil saat scroll */
+  width: 22px;
   height: 22px;
   margin-top: 8px;
 }
@@ -101,15 +99,15 @@
 /* Responsivitas */
 @media (max-width: 768px) {
   .navbar {
-    padding: 20px 30px; /* Padding lebih kecil di layar kecil */
+    padding: 20px 30px;
   }
 
   .navbar.scrolled {
-    padding: 15px 30px; /* Padding lebih kecil lagi saat scroll */
+    padding: 15px 30px;
   }
 
   .logo {
-    font-size  : 22px;
+    font-size: 22px;
   }
 
   .navbar.scrolled .logo {

@@ -18,10 +18,8 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulasi pengiriman data ke backend
     setTimeout(() => {
       setShowOverlay(true);
-      // Reset form setelah pengiriman
       setFormData({
         name: '',
         email: '',
@@ -29,7 +27,6 @@ const ContactPage = () => {
         subject: '',
         message: '',
       });
-      // Sembunyikan overlay setelah 3 detik
       setTimeout(() => {
         setShowOverlay(false);
       }, 3000);
@@ -44,7 +41,6 @@ const ContactPage = () => {
       </header>
 
       <div className="contact-content">
-        {/* Form Kontak */}
         <section className="contact-form-section">
           <h2>Kirim Pesan</h2>
           <form onSubmit={handleSubmit} className="contact-form">
@@ -113,7 +109,6 @@ const ContactPage = () => {
           </form>
         </section>
 
-        {/* Informasi Kontak */}
         <section className="contact-info-section">
           <h2>Informasi Kontak</h2>
           <div className="contact-info">
@@ -134,7 +129,6 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Media Sosial */}
           <div className="social-media">
             <h3>Ikuti Kami</h3>
             <div className="social-icons">
@@ -154,7 +148,6 @@ const ContactPage = () => {
           </div>
         </section>
 
-        {/* Peta Interaktif */}
         <section className="contact-map-section">
           <h2>Lokasi Kami</h2>
           <div className="map-container">
@@ -170,7 +163,6 @@ const ContactPage = () => {
           </div>
         </section>
 
-        {/* FAQ Sederhana */}
         <section className="contact-faq-section">
           <h2>Pertanyaan Umum</h2>
           <div className="faq-item">
@@ -188,7 +180,6 @@ const ContactPage = () => {
         </section>
       </div>
 
-      {/* Overlay Pesan Terkirim */}
       {showOverlay && (
         <div className="overlay">
           <div className="overlay-content">

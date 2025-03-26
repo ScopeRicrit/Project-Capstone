@@ -2,7 +2,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
@@ -52,7 +51,6 @@
   border-radius: 50%;
 }
 
-/* Fitur Unggulan */
 .features-section {
   display: flex;
   justify-content: space-between;
@@ -85,66 +83,59 @@
 }
 
 .stat-card {
-  background: #283739; /* Background awal hitam */
+  background: #283739;
   color: #EFFFFB;
-  padding: 20px 15px; /* Padding lebih kecil agar sesuai dengan ukuran baru */
+  padding: 20px 15px;
   border-radius: 10px;
-  width: 180px; /* Lebar lebih besar (horizontal) */
-  height: 90px; /* Tinggi lebih kecil */
+  width: 180px;
+  height: 90px;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Untuk efek swipe */
-  transition: background 0.3s ease; /* Transisi untuk background */
+  overflow: hidden;
+  transition: background 0.3s ease;
 }
 
-/* Efek swipe ke atas saat hover */
 .stat-card::before {
   content: '';
   position: absolute;
-  bottom: -100%; /* Mulai dari bawah */
+  bottom: -100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #283739 0%, #50D890 100%); /* Gradient swipe dari bawah ke atas */
-  transition: bottom 0.5s ease; /* Animasi swipe */
-  z-index: 1; /* Z-index lebih rendah dari konten */
+  background: linear-gradient(0deg, #283739 0%, #50D890 100%);
+  transition: bottom 0.5s ease;
+  z-index: 1;
 }
 
 .stat-card:hover::before {
-  bottom: 0; /* Swipe ke atas hingga penuh */
+  bottom: 0;
 }
 
-/* Background saat hover */
 .stat-card:hover {
-  background: linear-gradient(0deg, #283739 0%, #50D890 100%); /* Gradient sama dengan swipe */
+  background: linear-gradient(0deg, #283739 0%, #50D890 100%);
 }
 
-/* Konten kartu (angka dan teks) */
 .stat-card h3,
 .stat-card p {
   position: relative;
-  z-index: 2; /* Z-index lebih tinggi agar di atas efek swipe */
+  z-index: 2;
 }
 
-/* Styling angka dan teks */
 .stat-card h3 {
-  font-size: 26px; /* Sesuaikan font-size untuk ukuran baru */
+  font-size: 26px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 8px;
 }
 
 .stat-card p {
-  font-size: 11px; /* Sesuaikan font-size untuk ukuran baru */
+  font-size: 11px;
   font-weight: 500;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-
-
-/* Animasi saat kartu muncul */
 .stat-card {
   animation: slideUp 0.5s ease forwards;
 }
@@ -157,7 +148,6 @@
   animation-delay: 0.4s;
 }
 
-/* Animasi slide-up saat kartu muncul */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -175,7 +165,6 @@
   border-radius: 30px;
 }
 
-/* Keunggulan */
 .advantages-section {
   padding: 80px 100px;
   background-color: #f0f4f3;
@@ -207,11 +196,9 @@
 .advantage-card img {
   width: 90%;
   max-width: 500px;
- 
   margin-bottom: 10px;
   border-radius: 5px;
 }
-
 
 .advantage-card h3 {
   font-size: 20px;
@@ -226,7 +213,6 @@
   line-height: 1.6;
 }
 
-/* Responsivitas */
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
@@ -273,7 +259,7 @@
   }
 
   .stat-card {
-    width: 160px; /* Sesuaikan untuk layar kecil */
+    width: 160px;
     height: 90px;
   }
 
