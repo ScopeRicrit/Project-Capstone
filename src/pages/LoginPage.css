@@ -1,3 +1,4 @@
+/* === General Layout === */
 .login-page {
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@
   padding: 20px;
 }
 
+/* === Login Container === */
 .login-container {
   background: #ffffff;
   padding: 50px 35px;
@@ -26,12 +28,14 @@
   margin-bottom: 30px;
 }
 
+/* === Form Styling === */
 .login-form {
   display: flex;
   flex-direction: column;
-  padding: 0px 40px 0px 20px;
+  padding: 0 40px 0 20px;
 }
 
+/* === Input Group === */
 .input-group {
   margin-bottom: 20px;
 }
@@ -54,16 +58,31 @@
   font-family: 'Poppins', sans-serif;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
- 
+
 .input-group input:focus {
   border-color: #28a745;
   box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
   outline: none;
 }
 
+/* === Password Input Styling === */
 .password-wrapper {
   position: relative;
-} 
+}
+
+/* Menonaktifkan ikon bawaan browser untuk input password */
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 40px; /* Memberi ruang untuk ikon kustom */
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
 
 .password-toggle {
   position: absolute;
@@ -79,10 +98,19 @@
   color: #28a745;
 }
 
+/* === Error Message === */
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* === Login Button === */
 .login-button {
   font-family: 'Poppins', sans-serif;
   padding: 12px 14px;
-  margin: 10px 0px 0px 20px;
+  margin: 10px 0 0 20px;
   background-color: #28a745;
   color: white;
   border: none;
@@ -100,6 +128,7 @@
   box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
 }
 
+/* === Sign Up Link === */
 .signup-link {
   color: #666;
   margin-top: 20px;
@@ -117,14 +146,14 @@
   text-decoration: underline;
 }
 
-/* Styling untuk tombol Kembali */
+/* === Back Button === */
 .back-button {
   display: block;
   text-align: center;
   margin-top: 15px;
   margin-left: 20px;
   padding: 10px;
-  background-color: #f0f0f0; /* Warna abu-abu muda */
+  background-color: #f0f0f0;
   color: #1a3c34;
   border-radius: 8px;
   text-decoration: none;
@@ -134,11 +163,11 @@
 }
 
 .back-button:hover {
-  background-color: #e0e0e0; /* Warna abu-abu lebih gelap saat hover */
+  background-color: #e0e0e0;
   transform: scale(1.02);
 }
 
-/* Animasi Fade-In */
+/* === Animations === */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -150,7 +179,7 @@
   }
 }
 
-/* Responsivitas */
+/* === Responsiveness === */
 @media (max-width: 480px) {
   .login-container {
     padding: 20px;

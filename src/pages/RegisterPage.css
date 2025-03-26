@@ -80,7 +80,8 @@
 }
 
 .register-button {
-  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 14px;
   margin: 10px 0px 0px 20px;
   background-color: #28a745;
   color: white;

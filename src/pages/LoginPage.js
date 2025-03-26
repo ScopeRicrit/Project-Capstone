@@ -6,35 +6,38 @@ const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError('');
+
+    if (!username || !password) {
+      setError('Harap isi semua kolom.');
+      return;
+    }
+
     try {
-      // Simulasi API call ke backend untuk login
       const response = await fetch('https://your-backend-api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
       });
       const data = await response.json();
+
       if (data.success) {
-        localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('username', username); // Simpan username untuk dashboard
-        navigate('/dashboard');
-      } else {
-        alert('Login gagal. Periksa username atau password.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      // Simulasi login sementara (hapus setelah API backend siap)
-      if (username && password) {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
         navigate('/dashboard');
       } else {
-        alert('Harap isi semua kolom.');
+        setError('Login gagal. Periksa username atau password.');
       }
+    } catch (error) {
+      console.error('Error during login:', error);
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', username);
+      navigate('/dashboard');
     }
   };
 
@@ -42,6 +45,7 @@ const LoginPage = () => {
     <div className="login-page">
       <div className="login-container">
         <h2>Sign In to CuanCerdas</h2>
+        {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin} className="login-form">
           <div className="input-group">
             <label htmlFor="username">Username</label>
