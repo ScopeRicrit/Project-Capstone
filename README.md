@@ -1,6 +1,5 @@
 # Project-Capstone
-Seluruh repositori projek Capstone untuk Coding Camp 2025. Proyek ini adalah sebuah [ website? ] bertema [...].
-
+Seluruh repositori projek Capstone untuk Coding Camp 2025. Proyek ini adalah sebuah CuanCerdas bertema Financial Technology (Fintech) Revolution for the Young Generation.
 Anggota-anggota:
 1. FB | I Gede Kasuma Dana
 2. FB | I Nyoman Anrasansya Dharma Putra
