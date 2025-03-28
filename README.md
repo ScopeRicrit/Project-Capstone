@@ -1,9 +1,2 @@
-# Project-Capstone
-Seluruh repositori projek Capstone untuk Coding Camp 2025. Proyek ini adalah sebuah CuanCerdas bertema Financial Technology (Fintech) Revolution for the Young Generation.
-
-Anggota-anggota:
-1. FB | I Gede Kasuma Dana
-2. FB | I Nyoman Anrasansya Dharma Putra
-3. FB | Wahyudi Adhika Wijaya
-4. FB | Novia Elsyana
-5. ML | Randy Putra Setiawan		
+# Proyek-CuanCerdas
+CuanCerdas adalah program website Capstone Project untuk Coding Camp 2025, bertema Financial Technology (Fintech) Revolution for the Young Generation. CuanCerdas dikembangkan oleh 5 orang, dibagi menjadi 4 yang berskill Fullstack dan 1 berskill Machine Learning.
