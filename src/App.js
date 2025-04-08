@@ -7,25 +7,24 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
+import PengeluaranPage from './pages/PengeluaranPage';
 import DashboardPage from './pages/DashboardPage';
-import ContactPage from './pages/ContactPage'; // Impor ContactPage
+import ContactPage from './pages/ContactPage';
+import ReviewPage from './pages/ReviewPage'; // Tambahkan ReviewPage
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
-// Komponen untuk memeriksa apakah pengguna sudah login
 const isAuthenticated = () => {
   return localStorage.getItem('isLoggedIn') === 'true';
 };
 
-// Komponen PrivateRoute untuk melindungi rute dashboard
 const PrivateRoute = ({ children }) => {
   return isAuthenticated() ? children : <Navigate to="/login" />;
 };
 
-// Komponen untuk mengatur layout berdasarkan rute
 const Layout = ({ children }) => {
   const location = useLocation();
-  const hideNavbarAndFooter = ['/login', '/register', '/dashboard'].includes(location.pathname);
+  const hideNavbarAndFooter = ['/login', '/register', '/dashboard', '/pengeluaran', '/review', '/notfound'].includes(location.pathname);
 
   return (
     <div className="app">
@@ -46,16 +45,21 @@ const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/contact" element={<ContactPage />} /> {/* Tambahkan rute untuk ContactPage */}
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/profile" element={<NotFoundPage />} />
           <Route
             path="/dashboard"
-            element={
-              <PrivateRoute>
-                <DashboardPage />
-              </PrivateRoute>
-            }
+            element={<PrivateRoute><DashboardPage /></PrivateRoute>}
           />
+          <Route
+            path="/pengeluaran"
+            element={<PrivateRoute><PengeluaranPage /></PrivateRoute>}
+          />
+          <Route
+            path="/review"
+            element={<PrivateRoute><ReviewPage /></PrivateRoute>}
+          />
+          <Route path="/class" element={<NotFoundPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>

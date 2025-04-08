@@ -9,12 +9,29 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const validateUsername = (value) => {
+    const usernameRegex = /^[A-Za-z0-9]{1,16}$/; // Hanya huruf dan angka, max 16 karakter
+    return usernameRegex.test(value);
+  };
+
+  const handleUsernameChange = (e) => {
+    const value = e.target.value;
+    if (value.length <= 16) {
+      setUsername(value);
+    }
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
 
     if (!username || !password) {
       setError('Harap isi semua kolom.');
+      return;
+    }
+
+    if (!validateUsername(username)) {
+      setError('Username hanya boleh berisi huruf dan angka (tanpa spasi atau simbol), maksimal 16 karakter.');
       return;
     }
 
@@ -29,15 +46,26 @@ const LoginPage = () => {
       if (data.success) {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
+        const storedFullName = localStorage.getItem('fullName') || 'Nama Lengkap';
+        localStorage.setItem('fullName', storedFullName);
         navigate('/dashboard');
       } else {
         setError('Login gagal. Periksa username atau password.');
       }
     } catch (error) {
       console.error('Error during login:', error);
-      localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('username', username);
-      navigate('/dashboard');
+      const storedUsername = localStorage.getItem('username');
+      const storedPassword = localStorage.getItem('password');
+      const storedFullName = localStorage.getItem('fullName') || 'Nama Lengkap';
+
+      if (username === storedUsername && password === storedPassword) {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', username);
+        localStorage.setItem('fullName', storedFullName);
+        navigate('/dashboard');
+      } else {
+        setError('Login gagal. Periksa username atau password.');
+      }
     }
   };
 
@@ -53,8 +81,9 @@ const LoginPage = () => {
               type="text"
               id="username"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={handleUsernameChange}
               placeholder="Enter your username"
+              maxLength={16} // Batas maksimal di input
               required
             />
           </div>
@@ -83,7 +112,7 @@ const LoginPage = () => {
           <p className="signup-link">
             Belum punya akun? <Link to="/register">Sign Up</Link>
           </p>
-          <Link to="/" className="back-button">
+          <Link to="/" class className="back-button">
             Kembali ke Halaman Utama
           </Link>
         </form>

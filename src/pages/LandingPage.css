@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 150px 130px 150px;
+  padding: 20px 150px 130px 150px;
   background-color: #283739;
   color: #EFFFFB;
 }
@@ -47,8 +47,9 @@
 }
 
 .hero-image img {
-  width: 400px;
+  width: 440px;
   border-radius: 50%;
+  margin-right: -10px;
 }
 
 .features-section {

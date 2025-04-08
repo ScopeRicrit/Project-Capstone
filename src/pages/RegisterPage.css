@@ -117,14 +117,13 @@
   text-decoration: underline;
 }
 
-/* Styling untuk tombol Kembali */
 .back-button {
   display: block;
   text-align: center;
   margin-top: 15px;
   margin-left: 20px;
   padding: 10px;
-  background-color: #f0f0f0; /* Warna abu-abu muda */
+  background-color: #f0f0f0; 
   color: #1a3c34;
   border-radius: 8px;
   text-decoration: none;
@@ -134,11 +133,10 @@
 }
 
 .back-button:hover {
-  background-color: #e0e0e0; /* Warna abu-abu lebih gelap saat hover */
+  background-color: #e0e0e0;
   transform: scale(1.02);
 }
 
-/* Animasi Fade-In */
 @keyframes fadeIn {
   from {
     opacity: 0;

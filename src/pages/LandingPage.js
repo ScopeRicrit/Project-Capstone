@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import coinImage from "../assets/coin.png";
+import coinImage from "../assets/coinlogo_final.png";
 import articleImage from "../assets/article.jpg";
 import keunggulan1 from "../assets/keunggulan1.jpg";
 import keunggulan2 from "../assets/keunggulan2.jpg";
@@ -8,6 +8,16 @@ import keunggulan3 from "../assets/keunggulan3.jpg";
 import "./LandingPage.css";
 
 const LandingPage = () => {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+  const handleCtaClick = () => {
+    if (isLoggedIn) {
+      window.location.href = "/dashboard";
+    } else {
+      window.location.href = "/login";
+    }
+  };
+
   return (
     <div className="landing-page">
       {/* Hero Section */}
@@ -18,10 +28,7 @@ const LandingPage = () => {
             Platform edukasi finansial yang mengajak Anda menguasai keuangan
             dengan cerdas.
           </p>
-          <button
-            className="cta-button"
-            onClick={() => (window.location.href = "/login")}
-          >
+          <button className="cta-button" onClick={handleCtaClick}>
             Mulai sekarang
           </button>
         </div>

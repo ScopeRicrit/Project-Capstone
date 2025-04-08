@@ -1,74 +1,35 @@
-# Getting Started with Create React App
+# CuanCerdas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Selamat datang di **CuanCerdas**, platform edukasi finansial yang dirancang untuk membantu generasi muda meningkatkan literasi keuangan mereka dengan cara yang interaktif dan mudah dipahami. Proyek ini merupakan hasil kolaborasi tim berbakat dalam proyek Capstone kami.
 
-## Available Scripts
+## Tentang Proyek
 
-In the project directory, you can run:
+CuanCerdas adalah aplikasi berbasis web yang menyediakan berbagai fitur seperti artikel keuangan, kalkulator finansial, dan pengelolaan pengeluaran untuk mendukung remaja dalam merencanakan masa depan finansial mereka.
 
-pertama npm install terlebih dahulu
+### Tim Kami
+Proyek ini dikembangkan oleh tim yang terdiri dari 5 anggota dengan peran berikut:
+- **2 Frontend Developer**: Bertanggung jawab atas antarmuka pengguna dan pengalaman pengguna.
+- **2 Backend Developer**: Mengelola logika server dan integrasi data.
+- **1 Machine Learning Engineer**: Mengembangkan fitur berbasis data untuk analisis keuangan.
 
-abistu baru di npm start
+## Fitur Utama
+- **Learning Path**: Materi edukasi untuk Frontend, Backend, dan Machine Learning.
+- **Pengelolaan Keuangan**: Lacak pengeluaran Anda dengan mudah.
+- **Artikel Interaktif**: Konten keuangan yang relevan dan menarik untuk remaja.
+- **Desain Responsif**: Antarmuka yang ramah pengguna di berbagai perangkat.
 
-### `npm start`
+## Cara Memulai
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Berikut langkah-langkah untuk menjalankan proyek ini di lingkungan lokal Anda:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prasyarat
+Pastikan Anda telah menginstal:
+- [Node.js](https://nodejs.org/) (versi 14 atau lebih baru)
+- [npm](https://www.npmjs.com/) (biasanya sudah termasuk dengan Node.js)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Instalasi
+1. **Clone Repository**  
+   Clone proyek ini ke komputer Anda:
+   ```bash
+   git clone https://github.com/username/cuancerdas.git
+   cd cuancerdas

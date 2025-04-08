@@ -247,7 +247,6 @@
   line-height: 1.6;
 }
 
-/* Animasi Fade-In */
 @keyframes fadeIn {
   from {
     opacity: 0;
