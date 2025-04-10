@@ -137,33 +137,36 @@
   color: #1a3c34;
 }
 
-.logout-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 1001;
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-.logout-button {
-  background: #ff6b6b;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+button.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Jarak antara ikon dan teks */
+  padding: 12px 20px;
+  background-color: #ffffff; /* Background putih */
+  color: #ff0000; /* Teks merah */
+  border: 1px solid #ff0000; /* Border merah untuk kontras */
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-.logout-button:hover {
-  background: #e55a5a;
+.logout-button .logout-icon {
+  color: #ff0000; /* Ikon merah sama seperti teks */
+  font-size: 18px;
 }
+
+button.logout-button:hover {
+  background-color: #ffffff; 
+  color: #ff0000;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+}
+
 
 @keyframes fadeIn {
   from {

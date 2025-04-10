@@ -120,20 +120,20 @@ input[type="password"]::-webkit-textfield-decoration-container {
   box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
 }
 
-.signup-link {
+.signup-text {
   color: #666;
   margin-top: 20px;
   font-size: 14px;
   text-align: center;
 }
 
-.signup-link a {
+.signup-link {
   color: #ffd700;
   text-decoration: none;
   font-weight: 500;
 }
 
-.signup-link a:hover {
+.signup-link:hover {
   text-decoration: underline;
 }
 
@@ -141,7 +141,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   display: block;
   text-align: center;
   margin-top: 15px;
-  margin-left: 20px;
+  margin-left: 0px;
   padding: 10px;
   background-color: #f0f0f0;
   color: #1a3c34;

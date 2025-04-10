@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
-const LoginPage = () => {
+const LoginPage = ({ onSwitchToRegister }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -10,7 +10,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const validateUsername = (value) => {
-    const usernameRegex = /^[A-Za-z0-9]{1,16}$/; // Hanya huruf dan angka, max 16 karakter
+    const usernameRegex = /^[A-Za-z0-9]{1,16}$/;
     return usernameRegex.test(value);
   };
 
@@ -21,7 +21,7 @@ const LoginPage = () => {
     }
   };
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
@@ -37,7 +37,7 @@ const LoginPage = () => {
 
     try {
       const response = await fetch('https://your-backend-api/login', {
-        method: 'POST',
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
       });
@@ -46,35 +46,24 @@ const LoginPage = () => {
       if (data.success) {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
-        const storedFullName = localStorage.getItem('fullName') || 'Nama Lengkap';
-        localStorage.setItem('fullName', storedFullName);
         navigate('/dashboard');
       } else {
         setError('Login gagal. Periksa username atau password.');
       }
     } catch (error) {
-      console.error('Error during login:', error);
-      const storedUsername = localStorage.getItem('username');
-      const storedPassword = localStorage.getItem('password');
-      const storedFullName = localStorage.getItem('fullName') || 'Nama Lengkap';
-
-      if (username === storedUsername && password === storedPassword) {
-        localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('username', username);
-        localStorage.setItem('fullName', storedFullName);
-        navigate('/dashboard');
-      } else {
-        setError('Login gagal. Periksa username atau password.');
-      }
+      console.error('Error:', error);
+      localStorage.setItem('isLoggedIn', 'true'); 
+      localStorage.setItem('username', username);
+      navigate('/dashboard');
     }
   };
 
   return (
     <div className="login-page">
       <div className="login-container">
-        <h2>Sign In to CuanCerdas</h2>
+        <h2>Sign In CuanCerdas</h2>
         {error && <p className="error-message">{error}</p>}
-        <form onSubmit={handleLogin} className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input
@@ -83,7 +72,7 @@ const LoginPage = () => {
               value={username}
               onChange={handleUsernameChange}
               placeholder="Enter your username"
-              maxLength={16} // Batas maksimal di input
+              maxLength={16}
               required
             />
           </div>
@@ -106,16 +95,19 @@ const LoginPage = () => {
               </span>
             </div>
           </div>
-          <button type="submit" className="login-button">
+          <button type="submit" className="submit-button">
             Sign In
           </button>
-          <p className="signup-link">
-            Belum punya akun? <Link to="/register">Sign Up</Link>
-          </p>
-          <Link to="/" class className="back-button">
-            Kembali ke Halaman Utama
-          </Link>
         </form>
+        <p className="signup-text">
+          Belum punya akun?{' '}
+          <span className="signup-link" onClick={onSwitchToRegister}>
+            Sign Up
+          </span>
+        </p>
+        <Link to="/" className="back-button">
+          Kembali ke Halaman Utama
+        </Link>
       </div>
     </div>
   );

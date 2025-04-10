@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './RegisterPage.css';
 
-const RegisterPage = () => {
+const RegisterPage = ({ onSwitchToLogin }) => {
   const [username, setUsername] = useState('');
   const [fullName, setFullName] = useState('');
   const [password, setPassword] = useState('');
@@ -11,18 +11,16 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   const validateUsername = (value) => {
-    const usernameRegex = /^[A-Za-z0-9]{1,16}$/; // Hanya huruf dan angka, max 16 karakter
+    const usernameRegex = /^[A-Za-z0-9]{1,16}$/;
     return usernameRegex.test(value);
   };
 
   const handleUsernameChange = (e) => {
     const value = e.target.value;
-    if (value.length <= 16) {
-      setUsername(value);
-    }
+    if (value.length <= 16) setUsername(value);
   };
 
-  const handleRegister = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
@@ -53,8 +51,8 @@ const RegisterPage = () => {
         setError('Pendaftaran gagal. Silakan coba lagi.');
       }
     } catch (error) {
-      console.error('Error during registration:', error);
-      localStorage.setItem('isLoggedIn', 'true');
+      console.error('Error:', error);
+      localStorage.setItem('isLoggedIn', 'true'); 
       localStorage.setItem('username', username);
       localStorage.setItem('fullName', fullName);
       navigate('/dashboard');
@@ -64,9 +62,9 @@ const RegisterPage = () => {
   return (
     <div className="register-page">
       <div className="register-container">
-        <h2>Sign Up for CuanCerdas</h2>
+        <h2>Sign Up CuanCerdas</h2>
         {error && <p className="error-message">{error}</p>}
-        <form onSubmit={handleRegister} className="register-form">
+        <form onSubmit={handleSubmit} className="register-form">
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input
@@ -75,7 +73,7 @@ const RegisterPage = () => {
               value={username}
               onChange={handleUsernameChange}
               placeholder="Enter your username"
-              maxLength={16} // Batas maksimal di input
+              maxLength={16}
               required
             />
           </div>
@@ -109,16 +107,19 @@ const RegisterPage = () => {
               </span>
             </div>
           </div>
-          <button type="submit" className="register-button">
+          <button type="submit" className="submit-button">
             Sign Up
           </button>
-          <p className="signin-link">
-            Sudah punya akun? <Link to="/login">Sign In</Link>
-          </p>
-          <Link to="/" className="back-button">
-            Kembali ke Halaman Utama
-          </Link>
         </form>
+        <p className="login-text">
+          Sudah punya akun?{' '}
+          <span className="login-link" onClick={onSwitchToLogin}>
+            Sign In
+          </span>
+        </p>
+        <Link to="/" className="back-button">
+          Kembali ke Halaman Utama
+        </Link>
       </div>
     </div>
   );

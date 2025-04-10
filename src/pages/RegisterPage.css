@@ -79,7 +79,7 @@
   color: #1c221e;
 }
 
-.register-button {
+button.submit-button {
   font-family: 'Poppins', sans-serif;
   padding: 12px 14px;
   margin: 10px 0px 0px 20px;
@@ -94,26 +94,26 @@
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-.register-button:hover {
+button.submit-button:hover {
   background-color: #218838;
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
 }
 
-.signin-link {
+.login-text {
   color: #666;
   margin-top: 20px;
   font-size: 14px;
   text-align: center;
 }
 
-.signin-link a {
+.login-link {
   color: #ffd700;
   text-decoration: none;
   font-weight: 500;
 }
 
-.signin-link a:hover {
+.login-link:hover {
   text-decoration: underline;
 }
 
@@ -121,7 +121,7 @@
   display: block;
   text-align: center;
   margin-top: 15px;
-  margin-left: 20px;
+  margin-left: 0px;
   padding: 10px;
   background-color: #f0f0f0; 
   color: #1a3c34;

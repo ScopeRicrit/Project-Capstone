@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './DashboardPage.css';
-import { FaChartLine, FaClock, FaLightbulb } from 'react-icons/fa';
+import { FaChartLine, FaClock, FaLightbulb, FaSignOutAlt} from 'react-icons/fa';
 
 const DashboardPage = () => {
   const [userData, setUserData] = useState(null);
@@ -50,7 +50,7 @@ const DashboardPage = () => {
     localStorage.removeItem('fullName');
     localStorage.removeItem('hasProgress');
     localStorage.removeItem('transactions');
-    navigate('/login');
+    navigate('/accounts');
   };
 
   const handleViewDetails = () => {
@@ -122,6 +122,7 @@ const DashboardPage = () => {
           {showLogoutDropdown && (
             <div className="logout-dropdown">
               <button onClick={handleLogout} className="logout-button">
+              <FaSignOutAlt className="logout-icon" />
                 Logout
               </button>
             </div>

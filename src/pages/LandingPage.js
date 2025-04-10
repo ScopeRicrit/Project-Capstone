@@ -14,7 +14,7 @@ const LandingPage = () => {
     if (isLoggedIn) {
       window.location.href = "/dashboard";
     } else {
-      window.location.href = "/login";
+      window.location.href = "/accounts";
     }
   };
 
