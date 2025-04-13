@@ -1,5 +1,7 @@
 const accounts = require('./accounts'); // Ganti dengan database accounts
 
+const bcrypt = require("bcryptjs");
+
 const addAccountHandler = (request, h) => {
   const { username, fullName, password } = request.payload;
 
@@ -13,8 +15,11 @@ const addAccountHandler = (request, h) => {
     response.code(409);
     return response;
   };
+  
+  const salt = bcrypt.genSaltSync(10);
+  const hash = bcrypt.hashSync(password, salt);
 
-  const newAccount = { username, fullName, password };
+  const newAccount = { username, fullName, password: hash };
 
   accounts.push(newAccount);
 
@@ -45,7 +50,8 @@ const getAccountHandler = (request, h) => {
   const account = accounts.filter((searched) => searched.username === username)[0];
   
   if (account !== undefined) {
-    if (account.password === password) {
+    const isPasswordCorrect = bcrypt.compareSync(password, account.password);
+    if (isPasswordCorrect) {
       const fullName = account.fullName;
       console.log(accounts)
       return {
