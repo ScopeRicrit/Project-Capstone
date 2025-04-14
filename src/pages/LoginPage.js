@@ -95,7 +95,7 @@ const LoginPage = ({ onSwitchToRegister }) => {
               </span>
             </div>
           </div>
-          <button type="submit" className="submit-button">
+          <button type="submit" className="login-button">
             Sign In
           </button>
         </form>

@@ -79,7 +79,7 @@
   color: #1c221e;
 }
 
-button.submit-button {
+button.signup-button {
   font-family: 'Poppins', sans-serif;
   padding: 12px 14px;
   margin: 10px 0px 0px 20px;
@@ -94,7 +94,7 @@ button.submit-button {
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-button.submit-button:hover {
+button.signup-button:hover {
   background-color: #218838;
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);

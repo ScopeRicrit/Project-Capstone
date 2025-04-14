@@ -83,7 +83,7 @@
   resize: vertical;
 }
 
-.submit-button {
+button.submit-button {
   padding: 12px 20px;
   background-color: #1a3c34;
   color: #ffffff;
@@ -97,7 +97,7 @@
   transition: background-color 0.3s;
 }
 
-.submit-button:hover {
+button.submit-button:hover {
   background-color: #2e5e56;
 }
 
