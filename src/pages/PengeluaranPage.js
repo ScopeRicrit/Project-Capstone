@@ -197,9 +197,9 @@ const PengeluaranPage = () => {
           </div>
 
           <div className="standing-orders card">
-            <h2>Define standing orders</h2>
-            <p>We help you to: Define your recurring payments, and learn to care of regular transactions.</p>
-            <button className="action-button">Define standing order</button>
+            <h2>Bagaimana hasil pengeluaran anda?</h2>
+            <p>Gunakan pengeluaranmu dengan bijak.klik untuk melihat ulasan anda lebih lanjut!</p>
+            <button className="action-button" onClick={() => navigate('/review')}>Ulasan Pengeluaran</button>
           </div>
 
           <div className="linked-accounts card">
